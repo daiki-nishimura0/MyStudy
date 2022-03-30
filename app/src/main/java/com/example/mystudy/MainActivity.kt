@@ -9,10 +9,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-    println(lambda(2))
+        println(lambda1(2))
+        println(lambda2(2))
+        println(lambda3(2))
 
     }
-    val lambda: (Int) -> Int = { i: Int ->
-        i + i
+
+    val lambda1: (Int) -> Int = { x: Int ->
+        x + x
     }
+    val lambda2: (Int) -> Int = fun(x: Int): Int {
+        return x + x
+    }
+    val lambda3: (Int) -> Int = fun(x: Int) = x + x
 }
